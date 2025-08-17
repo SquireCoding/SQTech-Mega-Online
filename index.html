@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store Name</title>
+<style>
+  /* General styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  header input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 4px;
+  }
+
+  /* Grid for items */
+  .item-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    gap: 30px;
+  }
+
+  /* Individual item */
+  .item-card {
+    width: 100%;
+    padding: 8px;
+    font-weight: bold;
+    background-color: #7588b9;
+    cursor: pointer;
+    border: 2px solid #000;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+
+  .item-card:hover {
+    transform: scale(1.10);
+    background-color: #5773b9;
+  }
+
+  .item-card img {
+    max-width: 100%;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  .item-card button {
+    width: 100%;
+    padding: 8px;
+    font-weight: bold;
+    border: 0px solid #000;
+    background-color: #2b57c6;
+    cursor: pointer;
+  }
+
+  .item-card button:hover {
+    background-color: #5a77c1;
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>STORE NAME</h1>
+  <input type="text" placeholder="Search...">
+</header>
+
+<div class="item-grid">
+  <div class="item-card">
+    <img src="Dirt.png" alt="Item Image">
+    <p>Dirt<br>1C for 48 (0.02C each)</p>
+  </div>
+  <div class="item-card">
+    <img src="Dirt.png" alt="Item Image">
+    <p>Dirt<br>1C for 48 (0.02C each)</p>
+  </div>
+  <div class="item-card">
+    <img src="Dirt.png" alt="Item Image">
+    <p>Dirt<br>1C for 48 (0.02C each)</p>
+  </div>
+  <div class="item-card">
+    <img src="Dirt.png" alt="Item Image">
+    <p>Dirt<br>1C for 48 (0.02C each)</p>
+  </div>
+  <div class="item-card">
+    <img src="Dirt.png" alt="Item Image">
+    <p>Dirt<br>1C for 48 (0.02C each)</p>
+  </div>
+  <div class="item-card">
+    <img src="Dirt.png" alt="Item Image">
+    <p>Dirt<br>1C for 48 (0.02C each)</p>
+  </div>
+  <div class="item-card">
+    <img src="Dirt.png" alt="Item Image">
+    <p>Dirt<br>1C for 48 (0.02C each)</p>
+  </div>
+  <div class="item-card">
+    <img src="Dirt.png" alt="Item Image">
+    <p>Dirt<br>1C for 48 (0.02C each)</p>
+  </div>
+</div>
+
+</body>
+</html>

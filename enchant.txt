@@ -1,0 +1,36 @@
+Protection 4
+Fire Protection 4
+Blast Protection 4
+Projectile Protection 4
+Thorns 3
+Respiration 3
+Depth Strider 3
+Feather Falling 4
+Frost Walker 2
+Aqua Affinity
+Swift Sneak 3
+Sharpness 5
+Smite 5
+Bane of Arthropods 5
+Knockback 2
+Fire Aspect 2
+Looting 3
+Sweeping Edge 3
+Efficiency 5
+Silk Touch
+Unbreaking 3
+Fortune 3
+Power 5
+Punch 2
+Flame
+Infinity
+Mending
+Multishot 
+Piercing 4
+Quick Charge 3
+Riptide 3
+Loyalty 3
+Channeling
+Impaling 5
+Curse of Binding
+Curse of Vanishing
