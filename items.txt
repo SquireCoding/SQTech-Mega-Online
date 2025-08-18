@@ -12,7 +12,7 @@ Calcite
 Tuff
 Dripstone Block - 1/2
 Grass Block
-Dirt - 1/48
+Dirt - 1/48 = An essential block for filling up holes and adding that natural look that's so... natural.
 Coarse Dirt
 Podzol
 Rooted Dirt
