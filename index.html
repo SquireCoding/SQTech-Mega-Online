@@ -12,14 +12,14 @@
     padding: 20px;
   }
 
-  /* Top bar */
+  /* --- Top bar --- */
   .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
     border-bottom: 2px solid black;
-    background-color: #cce7ff; /* light blue top bar */
+    background-color: #cce7ff;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -39,12 +39,6 @@
     border: 2px solid black;
     outline: none;
     border-radius: 4px;
-  }
-
-  .search-box img {
-    width: 80px;
-    height: auto;
-    position: relative;
   }
 
   .cart-container {
@@ -69,15 +63,14 @@
     box-sizing: border-box;
   }
 
-  /* Grid */
-  .item-grid {
+  /* --- Grid view --- */
+  .grid-view .item-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(150px, 1fr));
     gap: 30px;
   }
 
-  /* Card */
-  .item-card {
+  .grid-view .item-card {
     width: 100%;
     padding: 8px;
     font-weight: bold;
@@ -85,93 +78,154 @@
     border: 2px solid #000;
     text-align: center;
     transition: transform 0.2s, background-color 0.2s;
-    background-color: #2a4faa; /* fallback */
+    background-color: #2a4faa;
   }
 
-  .item-card:hover {
+  .grid-view .item-card:hover {
     transform: scale(1.05);
   }
 
-  .item-card img {
+  .grid-view .item-card img {
     max-width: 100%;
     height: 100px;
     object-fit: contain;
     margin-bottom: 10px;
   }
 
-  .item-card p {
+  .grid-view .item-card p {
     color: #fff;
     margin: 8px 0;
   }
 
-  /* Buttons */
-  .button-row {
+  .grid-view .button-row {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
   }
 
-  .item-card button {
-    padding: 8px 20px; /* wider */
-    min-width: 50px;   /* enforce width */
+  .grid-view .item-card button,
+  .grid-view #longButton {
+    padding: 8px 20px;
     font-weight: bold;
     border: 2px solid #fff;
     background-color: #20d435;
     cursor: pointer;
     transition: background-color 0.2s;
+    color: #fff;
   }
 
-  .item-card button:hover {
+  .grid-view .item-card button:hover,
+  .grid-view #longButton:hover {
     background-color: #086f14;
   }
 
-  #longButton {
+  /* --- Detail view --- */
+  .detail-view {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .detail-view .item-image {
+    flex: 1;
+    border: 2px solid black;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .detail-view .item-image img {
     width: 100%;
-    padding: 10px;
-    font-weight: bold;
-    border: 2px solid #fff;
-    background-color: #20d435;
-    cursor: pointer;
-    transition: background-color 0.2s;
+    height: 100%;
+    object-fit: contain;
   }
 
-  #longButton:hover {
-    background-color: #086f14;
+  .detail-view .item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .detail-view .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .detail-view .quantity-controls button {
+    padding: 10px;
+    border: 2px solid black;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .detail-view .quantity-controls span {
+    font-size: 1.2rem;
+    width: 30px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .detail-view .item-info a {
+    padding: 10px;
+    border: 2px solid black;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+
+  .detail-view .quantity-controls button:hover,
+  .detail-view .item-info a:hover {
+    background: #000;
+    color: #fff;
   }
 </style>
 </head>
 <body>
+  <div class="top-bar">
+    <div class="store-name">Store Name</div>
+    <div class="search-box">
+      <div class="cart-container">
+        <img src="Cart2.png" alt="Shopping Cart">
+        <div class="cart-bubble">12</div>
+      </div>
+      <input type="text" placeholder="Search...">
+    </div>
+  </div>
 
-<div class="top-bar">
-  <div class="store-name">Store Name</div>
-  
-  <div class="search-box">
-    <div class="cart-container">
-      <img src="Cart2.png" alt="Shopping Cart">
-      <div class="cart-bubble">12</div>
+  <main class="grid-view" id="main">
+    <div class="item-grid">
+      <div class="item-card" onclick="loadDetail('Dirt')">
+        <img src="Dirt.png" alt="Item Image">
+        <p>Dirt<br>1C for 48 (0.02C each)</p>
+        <div class="button-row">
+          <button>+</button>
+          <span style="color:white;">0</span>
+          <button>-</button>
+        </div>
+      </div>
+      <div class="item-card">
+        <img src="Dirt.png" alt="Item Image">
+        <p>Dirt<br>1C for 48 (0.02C each)</p>
+        <button id="longButton">Add 48 to cart</button>
+      </div>
     </div>
-    <input type="text" placeholder="Search...">
-  </div>
-</div>
-<main>
-<div class="item-grid">
-  <div class="item-card" onclick="loadDetail('your momma')">
-    <img src="Dirt.png" alt="Item Image">
-    <p>Dirt<br>1C for 48 (0.02C each)</p>
-    <div class="button-row">
-      <button>+</button>
-      <span style="color:white;">0</span>
-      <button>-</button>
-    </div>
-  </div>
-  <div class="item-card">
-    <img src="Dirt.png" alt="Item Image">
-    <p>Dirt<br>1C for 48 (0.02C each)</p>
-    <button id="longButton">Add 48 to cart</button>
-  </div>
-</div>
-</div>
+  </main>
+
+<script src="scripts.js"></script>
 </body>
 </html>
-<script src="scripts.js"></script>
