@@ -1,33 +1,33 @@
-Stone - 1/48
-Granite - 1/24
+Stone-1/48
+Granite-1/24
 Polished Granite
-Diorite - 1/24
+Diorite-1/24
 Polished Diorite
-Andesite - 1/24
+Andesite-1/24
 Polished Andesite
-Deepslate - 1/32
-Cobbled Deepslate - 1/12
+Deepslate-1/32
+Cobbled Deepslate-1/12
 Polished Deepslate
 Calcite
 Tuff
-Dripstone Block - 1/2
+Dripstone Block-1/2
 Grass Block
-Dirt - 1/48 = An essential block for filling up holes and adding that natural look that's so... natural.
+Dirt-1/48=An essential block for filling up holes and adding that natural look that's so... natural.^ffffff
 Coarse Dirt
 Podzol
 Rooted Dirt
 Mud
 Muddy Mangrove Roots
 Clay
-Gravel - 1/10
-Sand - 1/10
+Gravel-1/10
+Sand-1/10
 Red Sand
-Soul Sand - 1/8
+Soul Sand-1/8
 Soul Soil
 Mycelium
 Crimson Nylium
 Warped Nylium
-Netherrack - 1/32
+Netherrack-1/32
 Basalt
 Polished Basalt
 Smooth Basalt
@@ -36,29 +36,29 @@ Purpur Block
 Purpur Pillar
 Purpur Stairs
 Purpur Slab
-Obsidian - 1/4
-Crying Obsidian - 1/2
-Water Bucket - 3/2 - b2
-Lava Bucket - 3/2 - b2
-Snow Block - 1/12
-Ice - 1/4
-Packed Ice - 1/2
-Blue Ice - 4/1
-Layer Snow - 1/8
-Powder Snow Bucket - 4/1 - b2
-Sponge - 10/1
+Obsidian-1/4
+Crying Obsidian-1/2
+Water Bucket-3/2-b2
+Lava Bucket-3/2-b2
+Snow Block-1/12
+Ice-1/4
+Packed Ice-1/2
+Blue Ice-4/1
+Layer Snow-1/8
+Powder Snow Bucket-4/1-b2
+Sponge-10/1
 Wet Sponge
-Glass - 1/2
+Glass-1/2
 Glass Pane
 Stained Glass
 Stained Glass Pane
-Wool - 1/3
+Wool-1/3
 Carpet
-Terracotta - 1/2
+Terracotta-1/2
 Glazed Terracotta
-Concrete - 1/4
-Concrete Powder - 1/6
-Bricks - 2/1
+Concrete-1/4
+Concrete Powder-1/6
+Bricks-2/1
 Brick Slab
 Brick Stairs
 Brick Wall
