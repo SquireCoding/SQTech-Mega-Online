@@ -1,4 +1,4 @@
-const itemsPage= `Stone-1/48=A natural grey rock used found very commonly underground, though silk touch is required to pick it up.^767676
+const itemsPage= `Stone-1/48=A natural grey rock found very commonly underground, though silk touch is required to pick it up.^767676
 Granite-1/24=An rock used in some construction that is a unique red hue.^946452
 Polished Granite-0/0=A smooth variation of the original red rock.
 Diorite-1/24=
@@ -300,6 +300,10 @@ function loadMainPage() {
             document.getElementsByClassName('item-grid')[0].innerHTML+=generateItemCard(itemLines[i]);
         }//Dirt-1/48=An essential block for filling up holes and adding that natural look that's so... natural.^ffffff
     }
+    if (cart.length==0) {
+      document.getElementsByClassName('cart-bubble')[0].innerHTML=0;
+    }
+    
 }
 
 function generateItemCard(line) {
@@ -331,16 +335,22 @@ function generateItemCard(line) {
       </div>
 */
 function loadDetail(name) {
+  let line='';
+  for (let i=0; i<itemLines.length; i++) {
+        if (itemLines[i].split("-")[0]===name) {
+            line=itemLines[i];
+        }//Dirt-1/48=An essential block for filling up holes and adding that natural look that's so... natural.^ffffff
+    }
   const main = document.getElementById("main");
   main.className = "detail-view";
   main.innerHTML = `
     <div class="item-image">
-      <img src="Dirt.png" alt="Item Image">
+      <img src="${name}.png" alt="Item Image">
     </div>
     <div class="item-info">
       <div>${name}</div>
-      <div>Item Price</div>
-      <div>Item Information</div>
+      <div>${line.split('-')[1].split("=")[0].split('/')[0]}C for ${line.split('-')[1].split("=")[0].split('/')[1]}</div>
+      <div>${line.split('=')[1].split('^')[0]}</div>
       <div class="quantity-controls">
         <button id="decrease">-</button>
         <span id="quantity">0</span>
@@ -357,22 +367,10 @@ function loadGrid() {
   main.className = "grid-view";
   main.innerHTML = `
     <div class="item-grid">
-      <div class="item-card" onclick="loadDetail('Dirt')">
-        <img src="Dirt.png" alt="Item Image">
-        <p>Dirt<br>1C for 48 (0.02C each)</p>
-        <div class="button-row">
-          <button>+</button>
-          <span style="color:white;">0</span>
-          <button>-</button>
-        </div>
-      </div>
-      <div class="item-card">
-        <img src="Dirt.png" alt="Item Image">
-        <p>Dirt<br>1C for 48 (0.02C each)</p>
-        <button id="longButton">Add 48 to cart</button>
-      </div>
+      
     </div>
   `;
+  loadMainPage();
 }
 class ItemPair {
     item="";
@@ -415,7 +413,7 @@ class Item {
             }
         }
         if (am==0) {
-            finalRes+=`<button id="longButton">Add ${this.amount} to cart</button>
+            finalRes+=`<button onclick="event.stopPropagation(); addToCart('Dirt',48);" id="longButton">Add ${this.amount} to cart</button>
       </div>`;
         } else finalRes+=`<div class="button-row">
           <button>+</button>
@@ -437,6 +435,29 @@ class Item {
         */
     }
 
+}
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 loadMainPage ()
